@@ -1,0 +1,30 @@
+#Next.js
+.next/ 
+out/ 
+build/ 
+node_modules/ 
+.env.local 
+.env.development.local 
+.env.test.local 
+.env.production.local
+
+#Rust
+/target/ 
+/Cargo.lock
+
+# WebAssembly
+*.wasm
+
+# General
+.DS_Store 
+.log 
+npm-debug.logyarn-debug.log* 
+yarn-error.log*
+
+# Editor
+.vscode/ 
+.idea/ 
+*.suo 
+.ntvs*.njsproj 
+*.sln 
+*.sw?
