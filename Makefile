@@ -1,10 +1,12 @@
 .PHONY: install_rust install_npm test build_rust build
 
+install: install_rust install_npm
+
 install_rust: 
-	@curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y @rustup target add wasm32-unknown-unknown
+	@curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 
 
 install_npm: 
-	@npm install next
+	@npm install 
 
 test: 
 	@cargo test
@@ -14,5 +16,6 @@ build_rust:
 
 build: build_rust 
 
-dev:
+dev: test build_rust
 	npm run dev
+
