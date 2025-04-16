@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import init, { Tetris } from "../../public/wasm/tetris_wasm.js";
+import init, { Tetris } from "@public/wasm/tetris_wasm.js";
 
 export default function TetrisPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

@@ -14,7 +14,10 @@ test:
 build_rust: 
 	@wasm-pack build --target web --out-dir public/wasm/
 
-build: build_rust 
+build_next:
+	@npm run build
+
+build: build_rust build_next
 
 dev: test build_rust
 	npm run dev
